@@ -155,3 +155,88 @@ border-radius: 12px;
 .tag-holder{
     margin-bottom: 16px;
 }
+
+/* =========================================
+   MOBILE RESPONSIVE STYLES (MAX-WIDTH: 768PX)
+   ========================================= */
+@media (max-width: 768px) {
+    
+    /* 1. Navbar - Locked to one single row, no scrolling */
+    .navbar {
+        height: auto; 
+        min-height: 60px;
+        flex-direction: row;
+        flex-wrap: nowrap !important;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4px 8px;
+        overflow: hidden; 
+    }
+
+    /* 2. Logo - Scaled down to leave room for text */
+    .navbar-logo {
+        width: auto; 
+        margin: 0;
+        flex-shrink: 0;
+    }
+    
+   .logo {
+        max-height: 40px; 
+        width: auto;
+    }
+
+    /* 3. Links - Ultra-compact sizing to fit the screen */
+    .navbar-link {
+        width: auto;
+        flex-direction: row;
+        flex-wrap: nowrap !important;
+        gap: 2px; 
+        padding: 0;
+        margin: 0;
+        justify-content: flex-end;
+    }
+
+    .navbar-link li {
+        list-style: none;
+        flex-shrink: 1; 
+    }
+
+    .navbar-link a {
+        font-size: 0.7rem; 
+        padding: 6px 4px; 
+        white-space: nowrap; 
+    }
+    
+    /* 4. Main Container & Articles */
+    .main-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .article,
+    .article-delete {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .article-image,
+    .article-image-delete {
+        flex: auto;
+        width: 100%;
+        height: auto;
+        max-height: none;
+    }
+
+    .article-image img,
+    .article-image-delete img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+}
